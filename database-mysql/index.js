@@ -7,9 +7,13 @@ var connection = mysql.createConnection({
   database : 'test'
 });
 
+var checkIfExists = function(){
+
+};
+
 var addNewSnackItem = function(item, callback) {
   console.log("SENDING TO DATABASE")
-  connection.query('INSERT INTO items (name) values (?)', [item], function(err, results, fields) {
+  connection.query('INSERT INTO items (name, guess) values (?, ?)', [item, 'false'], function(err, results, fields) {
     if(err) {
       console.log("NOPE", err)
       callback(err, null);

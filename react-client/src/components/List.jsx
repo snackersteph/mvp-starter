@@ -3,8 +3,8 @@ import ListItem from './ListItem.jsx';
 
 const List = (props) => (
   <div>
-    <h4> List Component </h4>
-    There are { props.list.length } items.
+    <h4>  </h4>
+    You guessed wrong { props.list.length } times.
     <ul>
     { props.list.map(item => <ListItem item={item} key={item.id}/>)}
     </ul>

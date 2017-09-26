@@ -11,7 +11,7 @@ class AddListItem extends React.Component {
 
   // Function to add snack
   addNewSnack(item) {
-    console.log('newsnack!!!!')
+    // console.log('newsnack!!!!')
     this.setState({
       snack: item.target.value
     })
@@ -20,13 +20,13 @@ class AddListItem extends React.Component {
   
 
   render () {
-    console.log("STATE: ",this.state.snack);
+    // console.log("STATE: ",this.state.snack);
     // console.log(this.props.addToList)
     return(
       <div>
-      New Snack: <input onChange={this.addNewSnack} value={this.state.snack}></input>
+      Your guess: <input onChange={this.addNewSnack} value={this.state.snack}></input>
       <br />
-      <button onClick={()=>{this.props.addToList(this.state.snack)}}>Add</button>
+      <button onClick={()=>{this.props.addToList(this.state.snack)}}>Try!</button>
       </div>
     )
   }

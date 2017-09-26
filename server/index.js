@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 // app.use(express.static(__dirname + '/../node_modules'));
 
 app.post('/snacks', function(req, res){
-  console.log("SERVER POST RECEIVED", req.body.name)
+  console.log("SERVER POST RECEIVED", req.body)
   let itemName = req.body.name;
   if(!itemName) {
     res.sendStatus(400);
